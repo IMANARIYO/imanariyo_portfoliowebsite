@@ -33,6 +33,10 @@ function ProtectedRoute({ element }) {
     element: <App />
   },
   {
+    path: '/login',
+    element: <LoginForm />
+  },
+  {
     path: '/users/:id',
     element: <Profile />
   },

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import Modal from 'react-modal';
-import axios from 'axios';
+import Modal from "react-modal";
+import React, { useState } from "react";
+import axios from "axios";
 
 Modal.setAppElement('#root');
 
@@ -85,7 +85,7 @@ function UserModal({ isOpen, closeModal, mode }) {
               </select>
             </label>
             <button type="submit" >Add</button>
-            {/* <button onClick={closeModal}>Cancel</button> */}
+            <button onClick={closeModal}>Cancel</button>
           </form>
         </>
       )}

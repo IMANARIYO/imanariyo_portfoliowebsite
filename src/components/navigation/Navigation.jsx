@@ -39,6 +39,7 @@ function HeadNavBar() {
 
   return (
     <div>
+
       <div className="head-nav-bar" >
         <div className="head">
           <div className="flex main-logo">

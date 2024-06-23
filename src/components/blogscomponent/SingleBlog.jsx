@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
-import './singleblog.css'
-import photo from '../images/project-2.jpg'
+import "./singleblog.css";
+import React, { useState } from "react";
+import photo from "../images/project-2.jpg";
+
 const SingleBlogPost = ({blog}) => {
   return (
     <div className='blog-main-content'>

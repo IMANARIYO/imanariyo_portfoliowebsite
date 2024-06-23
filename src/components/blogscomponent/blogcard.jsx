@@ -1,11 +1,12 @@
-import React from 'react'
-import { useState } from 'react'
-import { FiThumbsUp } from "react-icons/fi";
-import './singleblog.css'
-import { FaRegWindowClose } from "react-icons/fa";
+import "./singleblog.css";
+import BlogModalContent from "./BlogModalContent";
+import React from "react";
+import { useState } from "react";
 import { AiOutlineEye } from "react-icons/ai";
+import { FaRegWindowClose } from "react-icons/fa";
+import { FiThumbsUp } from "react-icons/fi";
 import { FiThumbsDown } from "react-icons/fi";
-import BlogModalContent from './BlogModalContent';
+
 function Singleblogmodal (props) {
 
   const [modal, setModal] = useState(false)
@@ -21,18 +22,18 @@ function Singleblogmodal (props) {
     ' key={props._id}>
       <div className='w-full h-[80%] overflow-hidden rounded-lg'>
         <img 
-          className="w-full h-60 object-cover group-hover:scale-110 duration-300 cursor-pointer"
+          className="object-cover w-full duration-300 cursor-pointer h-60 group-hover:scale-110"
         src={props.image} alt='' />
       </div>
-      <div className='flex  flex-col items-center justify-between'>
+      <div className='flex flex-col items-center justify-between gap-1'>
         <div className='blog-upper'>
           <div className='blog-category'>
-            <span className="text-base uppercase text-designColor font-normal">
+            <span className="text-base font-normal uppercase text-designColor">
               {props.category}
             </span>
             
           </div>
-          <div className='text-base uppercase text-designColor font-normal'>
+          <div className='text-base font-normal uppercase text-designColor'>
             {props.readmin}reading-min
           </div>
         </div>
