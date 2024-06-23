@@ -1,4 +1,3 @@
-
 import { HiArrowRight } from "react-icons/hi";
 
 const  Card = ({item:{title,des,icon}}) => {
@@ -23,7 +22,7 @@ const  Card = ({item:{title,des,icon}}) => {
             <h2 className="text-xl font-bold text-gray-300 md:text-2xl font-titleFont">
               {title}
             </h2>
-            <p className="text-white base">{des}</p>
+            <p className="tracking-wide text-white font-bodyFont">{des}</p>
             <span className="text-2xl text-designColor">
               <HiArrowRight />
             </span>
