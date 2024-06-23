@@ -38,7 +38,7 @@ function Homepage() {
           Hi, I'm <span className="capitalize text-designColor"> Baptiste</span>
         </h1>
         <h2 className="text-4xl font-bold tracking-wide text-white font-bodyFont">
-          a <span>{text}</span>
+          a <span className="tracking-wide font-bodyFont">{text}</span>
           <Cursor
             cursorBlinking="false"
             cursorStyle="|"

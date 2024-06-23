@@ -39,7 +39,6 @@ function HeadNavBar() {
 
   return (
     <div>
-
       <div className="head-nav-bar" >
         <div className="head">
           <div className="flex main-logo">
@@ -48,7 +47,7 @@ function HeadNavBar() {
           </div>
           <i id="open" className='bx bx-menu' onClick={toggleNavigation}><CiMenuBurger/></i>
       
-          <ul className={`navigation  tracking-wide font-bodyFont${isActive ? 'active' : ''}`}  onClick={toggleNavigation}>
+          <ul className={`navigation ${isActive ? 'active' : ''}`}  onClick={toggleNavigation}>
             <li>  
               <i id="close" className='bx bx-window-close' onClick={toggleNavigation}><FaWindowClose /></i>
             </li> 
