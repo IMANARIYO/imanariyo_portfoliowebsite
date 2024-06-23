@@ -33,11 +33,11 @@ function Homepage() {
             <div className="p-8 left-home-page">
         
             <div className="flex flex-col gap-5">
-        <h4 className="text-lg font-bodyFont ">WELCOME TO MY WORLD</h4>
-        <h1 className="text-6xl font-bold text-white">
+        <h4 className="text-lg tracking-wide font-bodyFont">WELCOME TO MY WORLD</h4>
+        <h1 className="text-6xl font-bold tracking-wide text-white font-bodyFont">
           Hi, I'm <span className="capitalize text-designColor"> Baptiste</span>
         </h1>
-        <h2 className="text-4xl font-bold text-white">
+        <h2 className="text-4xl font-bold tracking-wide text-white font-bodyFont">
           a <span>{text}</span>
           <Cursor
             cursorBlinking="false"
