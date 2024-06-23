@@ -33,7 +33,7 @@ function Homepage() {
             <div className="p-8 left-home-page">
         
             <div className="flex flex-col gap-5">
-        <h4 className="text-lg font-normal ">WELCOME TO MY WORLD</h4>
+        <h4 className="text-lg font-bodyFont ">WELCOME TO MY WORLD</h4>
         <h1 className="text-6xl font-bold text-white">
           Hi, I'm <span className="capitalize text-designColor"> Baptiste</span>
         </h1>
