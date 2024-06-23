@@ -3,10 +3,11 @@ import React from "react";
 import axios from "axios";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 
-function SignupForm () {
-  const { register, handleSubmit, formState: { errors }, setValue } = useForm()
+function SignupForm() {
+  const { register, handleSubmit, formState: { errors }, setValue } = useForm();
 
   const handleSignup = async data => {
     const {
@@ -17,21 +18,21 @@ function SignupForm () {
       phoneNumber,
       gender,
       image
-    } = data
+    } = data;
 
     if (password !== confirmPassword) {
-      toast.error('Passwords do not match', { autoClose: 30000 })
-      return
+      toast.error('Passwords do not match', { autoClose: 30000 });
+      return;
     }
 
     try {
-      const formData = new FormData()
-      formData.append('email', email)
-      formData.append('password', password)
-      formData.append('fullNames', fullNames)
-      formData.append('phoneNumber', phoneNumber)
-      formData.append('gender', gender)
-      formData.append('image', image[0])
+      const formData = new FormData();
+      formData.append('email', email);
+      formData.append('password', password);
+      formData.append('fullNames', fullNames);
+      formData.append('phoneNumber', phoneNumber);
+      formData.append('gender', gender);
+      formData.append('image', image[0]);
 
       const response = await axios.post(
         'https://myportfolioapi-8vku.onrender.com/auth/signup',
@@ -41,23 +42,23 @@ function SignupForm () {
             'Content-Type': 'multipart/form-data'
           }
         }
-      )
+      );
 
-      const responseData = response.data
+      const responseData = response.data;
       if (response.status === 201) {
         toast.success('Signup successful!', {
           autoClose: 30000,
           onClose: () => {
-            window.location.href = '/login'
+            window.location.href = '/login'; // You can also use history.push('/login') if you have access to history object
           }
-        })
+        });
       } else {
-        toast.error(responseData.message, { autoClose: 30000 })
+        toast.error(responseData.message, { autoClose: 30000 });
       }
     } catch (error) {
-      toast.error('An error occurred. Please try again later.', { autoClose: 30000 })
+      toast.error('An error occurred. Please try again later.', { autoClose: 30000 });
     }
-  }
+  };
 
   return (
     <div className='flex items-center justify-center min-h-screen'>
@@ -173,15 +174,15 @@ function SignupForm () {
           </button>
           <div className='mt-4'>
             <span className='text-gray-600'>Already have an account?</span>
-            <a href='/login' className='ml-2 text-blue-500'>
+            <Link to='/login' className='ml-2 text-blue-500'>
               Login
-            </a>
+            </Link>
           </div>
         </form>
       </div>
       <ToastContainer />
     </div>
-  )
+  );
 }
 
-export default SignupForm
+export default SignupForm;

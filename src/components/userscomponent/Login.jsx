@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 function LoginForm() {
@@ -60,7 +60,6 @@ function LoginForm() {
 
   // Update the onClick handler for the close button
   const handleClose = () => {
-    
     navigate('/'); // Navigate to home page
     setIsLoggedIn(true);
   };
@@ -105,7 +104,7 @@ function LoginForm() {
             </button>
             <div className='mt-4'>
               <span className='text-gray-600'>Forgot your password?</span>
-              <a href='/signup' className='ml-2 text-blue-500'>Sign up</a>
+              <Link to='/signup' className='ml-2 text-blue-500'>Sign up</Link>
             </div>
           </form>
         </div>
