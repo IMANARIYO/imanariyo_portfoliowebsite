@@ -1,6 +1,7 @@
 import "slick-carousel/slick/slick.css";
 import React, { useState } from "react";
 import Slider from "react-slick";
+import TestimonialSlide from "./TestimonialSlide";
 import Title from "../layouts/Title";
 import { HiArrowLeft, HiArrowRight } from "react-icons/hi";
 import { RiStarFill } from "react-icons/ri";
@@ -29,7 +30,26 @@ function SamplePrevArrow(props) {
     </div>
   );
 }
-
+const testimonials = [
+  
+  {
+    image: `${testimonialOne}`,
+    name: 'Chris Lee',
+    title: 'Software Engineer',
+    designation: 'Innovative Tech',
+    testimonymessage: 'Their expertise in software development is unparalleled. They delivered a robust solution that has greatly improved our efficiency. The team’s innovative approach and commitment to excellence were evident in every phase of the project, making them an invaluable partner in our digital transformation journey.',
+    date: 'via Upwork - Apr 20, 2022 - Dec 10, 2022',
+    head: 'Mobile App Designing'
+  },
+  {
+    image: `${testimonialTwo}`,
+    name: 'Emily Davis',
+    title: 'Product Manager',
+    designation: 'E-Commerce Co.',
+    testimonymessage: 'The project was completed ahead of schedule and exceeded all our expectations. Their team is incredibly talented and professional. Their ability to understand our vision and translate it into a functional and aesthetically pleasing product was truly impressive. We couldn’t have asked for a better partnership.',
+    date: 'via LinkedIn - May 1, 2021 - Jan 20, 2023'
+  },
+];
 const Testimonial = () => {
       const [dotActive, setDocActive] = useState(0);
      const settings = {
@@ -96,159 +116,20 @@ const Testimonial = () => {
         <Title title="WHAT CLIENTS SAY" des="Testimonial" />
       </div>
       <div className="max-w-6xl p-16 mx-auto ">
-        {/* ================ Slider One ================== */}
+       
         <Slider {...settings}>
-          <div className="w-full">
-            <div className="flex flex-col justify-between w-full h-auto lgl:flex-row P-4">
-              <div className="w-full lgl:w-[35%] h-full bg-gradient-to-r from-[#1e2024] to-[#23272b] p-8 rounded-lg shadow-shadowOne flex flex-col md:flex-row lgl:flex-col gap-8 justify-center md:justify-start lgl:justify-center">
-                <img
-                  className="object-cover rounded-lg h-72 md:h-32 lgl:h-72"
-                  src={testimonialOne}
-                  alt="testimonialOne"
-                />
-                <div className="flex flex-col justify-end w-full">
-                  <p className="mb-2 text-xs tracking-wide uppercase text-designColor">
-                    Bound - Trolola
-                  </p>
-                  <h3 className="text-2xl font-bold">Jone Duone Joe</h3>
-                  <p className="text-base tracking-wide text-gray-500">
-                    Operation Officer
-                  </p>
-                </div>
-              </div>
-              <div className="w-full lgl:w-[60%] h-full flex flex-col justify-between">
-                <img className="w-20 lgl:w-32" src={quote} alt="quote" />
-                <div className="w-full h-[70%] py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] rounded-lg shadow-shadowOne p-4 lgl:p-8 flex flex-col justify-center gap-4 lgl:gap-8">
-                  <div className="flex flex-col justify-between py-6 border-b-2 lgl:items-center border-b-gray-900">
-                    <div>
-                      <h3 className="text-xl font-medium tracking-wide lgl:text-2xl">
-                        Travel Mobile App Design.
-                      </h3>
-                      <p className="mt-3 text-base text-gray-400">
-                        via Upwork - Mar 4, 2015 - Aug 30, 2021 test
-                      </p>
-                    </div>
-                    <div className="flex gap-1 text-yellow-500">
-                      <RiStarFill />
-                      <RiStarFill />
-                      <RiStarFill />
-                      <RiStarFill />
-                      <RiStarFill />
-                    </div>
-                  </div>
-                  <p className="text-base font-medium leading-6 tracking-wide text-gray-400 font-titleFont">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-                    dolorum, eos natus ipsum numquam veniam officia
-                    necessitatibus ratione quos debitis exercitationem
-                    repudiandae facilis id neque nihil accusantium perspiciatis
-                    repellat? Iste.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* ================ Slider Two ================== */}
-
-          <div className="w-full">
-            <div className="flex flex-col justify-between w-full h-auto lgl:flex-row">
-              <div className="w-full lgl:w-[35%] h-full bg-gradient-to-r from-[#1e2024] to-[#23272b] p-8 rounded-lg shadow-shadowOne flex flex-col md:flex-row lgl:flex-col gap-8 justify-center md:justify-start lgl:justify-center">
-                <img
-                  className="object-cover rounded-lg h-72 md:h-32 lgl:h-72"
-                  src={testimonialTwo}
-                  alt="testimonialTwo"
-                />
-                <div className="flex flex-col justify-end w-full">
-                  <p className="mb-2 text-xs tracking-wide uppercase text-designColor">
-                    Bound - Trolola
-                  </p>
-                  <h3 className="text-2xl font-bold">Jone Duone Joe</h3>
-                  <p className="text-base tracking-wide text-gray-500">
-                    Operation Officer
-                  </p>
-                </div>
-              </div>
-              <div className="w-full lgl:w-[60%] h-full flex flex-col justify-between">
-                <img className="w-20 lgl:w-32" src={quote} alt="quote" />
-                <div className="w-full h-[70%] py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] rounded-lg shadow-shadowOne p-4 lgl:p-8 flex flex-col justify-center gap-4 lgl:gap-8">
-                  <div className="flex flex-col justify-between py-6 border-b-2 lgl:items-center border-b-gray-900">
-                    <div>
-                      <h3 className="text-xl font-medium tracking-wide lgl:text-2xl">
-                        Travel Mobile App Design.
-                      </h3>
-                      <p className="mt-3 text-base text-gray-400">
-                        via Upwork - Mar 4, 2015 - Aug 30, 2021 test
-                      </p>
-                    </div>
-                    <div className="flex gap-1 text-yellow-500">
-                      <RiStarFill />
-                      <RiStarFill />
-                      <RiStarFill />
-                      <RiStarFill />
-                      <RiStarFill />
-                    </div>
-                  </div>
-                  <p className="text-base font-medium leading-6 tracking-wide text-gray-400 font-titleFont">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-                    dolorum, eos natus ipsum numquam veniam officia
-                    necessitatibus ratione quos debitis exercitationem
-                    repudiandae facilis id neque nihil accusantium perspiciatis
-                    repellat? Iste.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* ================ Slider Three ================== */}
-
-          <div className="w-full">
-            <div className="flex flex-col justify-between w-full h-auto lgl:flex-row">
-              <div className="w-full lgl:w-[35%] h-full bg-gradient-to-r from-[#1e2024] to-[#23272b] p-8 rounded-lg shadow-shadowOne flex flex-col md:flex-row lgl:flex-col gap-8 justify-center md:justify-start lgl:justify-center">
-                <img
-                  className="object-cover rounded-lg h-72 md:h-32 lgl:h-72"
-                  src={testimonialOne}
-                  alt="testimonialOne"
-                />
-                <div className="flex flex-col justify-end w-full">
-                  <p className="mb-2 text-xs tracking-wide uppercase text-designColor">
-                    Bound - Trolola
-                  </p>
-                  <h3 className="text-2xl font-bold">Jone Duone Joe</h3>
-                  <p className="text-base tracking-wide text-gray-500">
-                    Operation Officer
-                  </p>
-                </div>
-              </div>
-              <div className="w-full lgl:w-[60%] h-full flex flex-col justify-between">
-                <img className="w-20 lgl:w-32" src={quote} alt="quote" />
-                <div className="w-full h-[70%] py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] rounded-lg shadow-shadowOne p-4 lgl:p-8 flex flex-col justify-center gap-4 lgl:gap-8">
-                  <div className="flex flex-col justify-between py-6 border-b-2 lgl:items-center border-b-gray-900">
-                    <div>
-                      <h3 className="text-xl font-medium tracking-wide lgl:text-2xl">
-                        Travel Mobile App Design.
-                      </h3>
-                      <p className="mt-3 text-base text-gray-400">
-                        via Upwork - Mar 4, 2015 - Aug 30, 2021 test
-                      </p>
-                    </div>
-                    <div className="flex gap-1 text-yellow-500">
-                      <RiStarFill />
-                      <RiStarFill />
-                      <RiStarFill />
-                      <RiStarFill />
-                      <RiStarFill />
-                    </div>
-                  </div>
-                  <p className="text-base font-medium leading-6 tracking-wide text-gray-400 font-titleFont">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-                    dolorum, eos natus ipsum numquam veniam officia
-                    necessitatibus ratione quos debitis exercitationem
-                    repudiandae facilis id neque nihil accusantium perspiciatis
-                    repellat? Iste.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          {testimonials.map((testimonial, index) => (
+            <TestimonialSlide
+              key={index}
+              image={testimonial.image}
+              name={testimonial.name}
+              title={testimonial.title}
+              designation={testimonial.designation}
+              testimonymessage={testimonial.testimonymessage}
+              date={testimonial.date}
+              head={testimonial.head}
+            />
+          ))}
         </Slider>
       </div>
     </section>

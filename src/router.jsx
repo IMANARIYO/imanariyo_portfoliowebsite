@@ -1,7 +1,9 @@
 import App from "./App.jsx";
 import Blog from "./components/blogscomponent/BlogsComponents.jsx";
 import Clients from "./components/clients/Clients.jsx";
+import Contact from "./components/contact/contact/Contact.jsx";
 import Dashboard from "./dashboard/Dashboard.jsx";
+import Features from "./components/features/Features.jsx";
 import LoginForm from "./components/userscomponent/Login.jsx";
 import Portfolio from "./components/portfoliocomponent/Portfolio.jsx";
 import Profile from "./components/userscomponent/Profile.jsx";
@@ -33,6 +35,11 @@ function ProtectedRoute({ element }) {
     element: <App />
   },
   {
+    path: '/features',
+    element: <Features />
+  },
+  
+  {
     path: '/login',
     element: <LoginForm />
   },
@@ -56,17 +63,13 @@ function ProtectedRoute({ element }) {
     path: '/blog',
     element: <Blog />
   },
-  // {
-  //   path: '/contact',
-  //   element: <Contact />
-  // },
+ 
   {
     path: '/clients',
     element: <Clients />
   },
   {
     path: '/dashboard',
-    // element: <Dashboard />
     element: <ProtectedRoute element={<Dashboard />} />
   },
   {

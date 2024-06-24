@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useContext } from 'react'
-import BlogsContext from './BlogsContext'
-import '../../App.css'
-import SingleBlogPost from './SingleBlog'
-import Singleblogmodal from './blogcard'
-import Title from '../layouts/Title'
+import "../../App.css";
+import BlogsContext from "./BlogsContext";
+import React, { useContext, useEffect, useState } from "react";
+import SingleBlogPost from "./SingleBlog";
+import Singleblogmodal from "./blogcard";
+import Title from "../layouts/Title";
 
 function Blog () {
   const { blogs } = useContext(BlogsContext)
@@ -20,9 +20,9 @@ function Blog () {
     console.log(blog)
   }
   return (
-    <div className='section blog' id='blog'>
+    <section className='section blog' id='blog'>
       {isSingleBlogOpen && <SingleBlogPost closeSingleBlog={closeSingleBlog} />}
-      <div className='flex justify-center items-center text-center'>
+      <div className='flex items-center justify-center text-center'>
         <Title title=' VISIT MY BLOG AND KEEP YOUR FEEDBACK' des='My Blogs' />
       </div>
       <div className='blogs-container'>
@@ -46,7 +46,7 @@ function Blog () {
             />
           )}
       </div>
-    </div>
+    </section>
   )
 }
 

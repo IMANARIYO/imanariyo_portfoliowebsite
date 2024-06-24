@@ -92,15 +92,15 @@
       padding: 0;
   }
   
-  .navigation a {
-      text-decoration: none;
-      color: #fff;
-      transition: color 0.3s ease;
-  }
-  
-  .navigation a:hover {
-      color: #ccc;
-  }
+ .navigation li:hover,  .best-skill-on-icons .bx:hover,.findme-icons .bx:hover,.best-skill-on p:hover,.findme p:hover{
+  border-bottom:3px solid gray;
+ }
+ .navigation li {
+  transition: border-bottom 0.8s ease; /* Add transition for smooth effect */
+}
+.active-item .nav-link {
+  border-bottom: 3px solid red;
+}
   
   .authentication {
       display: flex;
@@ -114,7 +114,7 @@
   }
   .section,section{
     min-height: 100vh;
-    /* border: 3px seagreen solid; */
+    
     padding-top:6rem;
   }
   
@@ -136,8 +136,6 @@
     right: 0;
     bottom: 0;
   }
-  
-
   .basics{
   margin-top: 20px; 
   display: flex;
@@ -153,7 +151,7 @@
    line-height: 27px;
   text-transform: uppercase;
   /* display: block; */
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
   }
   .best-skill-on-icons , .findme-icons {
   

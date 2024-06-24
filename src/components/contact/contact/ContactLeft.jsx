@@ -23,14 +23,13 @@ const ContactLeft = () => {
         <p className='text-lg font-normal text-gray-400'> 
           MERN/java  Full Stack Developer
         </p>
-        <p className='text-base tracking-wide text-gray-400'>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis
-          ipsam autem cumque, accusantium dicta odio.
+        <p className='text-base tracking-wide text-white font-bodyFont'>
+        I specialize in developing robust web applications using modern technologies like React, Node.js, and Java. With a keen eye for detail and a passion for coding, I aim to deliver seamless user experiences and high-performance applications.
         </p>
-        <p className='flex items-center gap-2 text-base text-gray-400'>
+        <p className='flex items-center gap-2 tracking-wide text-white font-bodyFont'>
           Phone: <span className='text-lightText'>+250787795163</span>
         </p>
-        <p className='flex items-center gap-2 text-base text-gray-400'>
+        <p className='flex items-center gap-2 text-base text-white-400'>
           Email: <span className='text-lightText'>imanariyobaptiste@gmail.com</span>
         </p>
       </div>
@@ -44,7 +43,15 @@ const ContactLeft = () => {
                             <FaWhatsapp   className='bx' />
                         </div>
                     </div>
-            
+                    <div className="mt-4 download-cv">
+          <a
+            href={"https://res.cloudinary.com/dorjr1njc/image/upload/v1719239042/ivgn0cf7ai1bz2dafnfn.pdf"}
+            download
+            className="inline-block px-6 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700"
+          >
+            Download My CV
+          </a>
+        </div>
           </div>
     </div>
   )

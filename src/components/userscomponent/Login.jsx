@@ -8,7 +8,7 @@ function LoginForm() {
   const [password, setPassword] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [error, setError] = useState('');
-  const navigate = useNavigate(); // Import useNavigate
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const accessToken = localStorage.getItem('accessToken');
@@ -36,10 +36,10 @@ function LoginForm() {
         localStorage.setItem('user', JSON.stringify(data.user)); // Store user object as string
         setIsLoggedIn(true);
         if (data.user.role === 'admin') {
-          window.location.href = '/dashboard';
-        } else {
-          window.location.href = '/';
-        }
+          toast.success('Welcome Admin!');
+          navigate('/dashboard');
+        } 
+       
       } else {
         setError(data.message);
         toast.error(data.message); // Toast notification for error message
