@@ -1,11 +1,11 @@
-import ContactLeft from './ContactLeft'
-import Title from '../../layouts/Title'
-import axios from 'axios'
-import { useEffect, useState } from 'react'
+import ContactLeft from "./ContactLeft";
+import Title from "../../layouts/Title";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const Contact = () => {
   const [username, setUsername] = useState('')
-  const [phoneNumber, setPhoneNumber] = useState('')
+  const [telphone, settelphone] = useState('')
   const [email, setEmail] = useState('')
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
@@ -24,7 +24,7 @@ const Contact = () => {
     e.preventDefault()
     if (username === '') {
       setErrMsg('Username is required!')
-    } else if (phoneNumber === '') {
+    } else if (telphone === '') {
       setErrMsg('Phone number is required!')
     } else if (email === '') {
       setErrMsg('Please give your Email!')
@@ -39,7 +39,7 @@ const Contact = () => {
         const url = 'https://myportfolioapi-8vku.onrender.com'
         const response = await axios.post(`${url}/contact/createContact`, {
           name: username,
-          phoneNumber,
+          telphone,
           email,
           subject,
           message
@@ -51,7 +51,7 @@ const Contact = () => {
           )
           setErrMsg('')
           setUsername('')
-          setPhoneNumber('')
+          settelphone('')
           setEmail('')
           setSubject('')
           setMessage('')
@@ -123,8 +123,8 @@ const Contact = () => {
                     Phone Number
                   </p>
                   <input
-                    onChange={e => setPhoneNumber(e.target.value)}
-                    value={phoneNumber}
+                    onChange={e => settelphone(e.target.value)}
+                    value={telphone}
                     className={`${errMsg === 'Phone number is required!' &&
                       'outline-designColor'} contactInput`}
                     type='text'
